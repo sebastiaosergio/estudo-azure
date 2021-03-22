@@ -1,6 +1,6 @@
 # Azure - Anotações #
 
-Baseado na trilha de conhecimento [Princípios básicos do Azure](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/) do [Microsoft Learn](https://docs.microsoft.com/pt-br/learn)
+Baseado na trilha de conhecimento [Princípios básicos do Azure](https://docs.microsoft.com/pt-br/learn/paths/az-900-describe-cloud-concepts/) do [Microsoft Learn](https://docs.microsoft.com/pt-br/learn).
 
 Serviço de computação em nuvem da Microsoft. 
 
@@ -81,3 +81,41 @@ Hierarquia da organizaçãodos recursos
 - 1.1.1 Grupos de recursos
 - 1.1.1.1 Recursos
 
+As assinaturas do Azure são unidade lógica (unidade de acesso) de acesso e uso do Azure vinculadas a uma conta.
+
+Nas assinaturas é possível criar limites de cobrança e de acesso. Ou seja, caso queira limitar a assinatura a determinado valor atingido ou a determinados níveis de uso e acesso.
+
+As assinaturas podem ser usadas, por exemplo: Distinguindo ambientes (produção, testes, homologação, beta), departamentos, projetos, etapas de um projeto, equipes etc. É muito útil na gestão do Azure, pois relatórios de custos podem ser gerados baseados nas assinaturas, e assim compreender todo o processo de uso/consumo.
+
+Na fatura pode-se criar uma subdivisão pelas assinaturas, criando assim sessões na fatura. Por exemplo: Assinatura 1 gastou x reais, assinatura 2 y reais, etc.
+Na gestão de custos/fatura é possível criar perfis de cobrança. Esse perfil gerará faturas e formas de pagamento separadas. Os perfis agrupam diversas assinaturas. Por tanto pode-se separar em, por exemplo: Custos de Produção (sessão assinatura Aplicação, sessão assinatura Mobile).
+
+Portanto ao configurar os custos do Azure é importante levar em consideração essa organização para melhor proveito dos dados e da gestão de custos.
+
+Os grupos de gerenciamento fornecem uma camada acima das assinaturas para gestão de acessos e segurança. Portanto um grupo de gerenciamento pode ser o guia de outros grupos ou assinaturas.
+
+### Hierarquia ###
+![Hierarquia](management-groups-and-subscriptions.png)
+
+Um recurso do Azure é um **item gerenciável** disponibilizado por meio do Azure. VMs (máquinas virtuais), contas de armazenamento, aplicativos Web, bancos de dados e redes virtuais são exemplos de recursos.
+
+Um grupo de recursos é a divisão lógica de recursos, ou seja, um agrupamento baseado nos critérios que desejar de diversos recursos.
+
+---
+Regiões e Zonas de Disponibilidade
+
+Os recursos do Azure estão hospedados em `Regiões`. 
+As regiões podem possuir `Zonas de Disponibilidades`, que são divisões entre data centers da mesma Zona. 
+
+Existem também regiões especiais (Governamentais e parceria com DataCenter na China).
+
+Existem também os `Pares de região`: que são réplicas de uma zona em outra zona distante geograficamente. Em casos de alguma catastrofe ou problema temporario afete determinada região existe a outra para fins de manutenção das aplicações. 
+
+---
+Serviço de Aplicativo
+
+Plataforma para criação e hospedagem de serviços sem a necessidade de infraestrutura. Por exemplo: Aplicações, APIs, Sites..
+
+Azure Marketplace
+
+Loja que hospeda aplicações já preconfiguradas e otimizadas para o uso na Azure.
